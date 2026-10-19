@@ -1,0 +1,5 @@
+# Netlify Redirects & Clean URLs
+/case-study/scoreup               /case-studies/scoreup.html             200
+/case-study/icici-home-loans      /case-studies/icici-home-loans.html    200
+/case-study/decorbvibes           /case-studies/decorbvibes.html         200
+/case-study/blinkx                /case-studies/blinkx.html              200

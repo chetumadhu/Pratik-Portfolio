@@ -1,0 +1,991 @@
+/* ==========================================================================
+   PRATIK BACHHAV — PORTFON DESIGN SYSTEM
+   Pixel-Perfect Replication of User Reference Screenshots
+   ========================================================================== */
+
+:root {
+  --bg-page: #c8ceda;
+  --bg-card: #ffffff;
+  --bg-card-alt: #e9eef5;
+  --border-card: rgba(255, 255, 255, 0.7);
+  --text-main: #0a0f1d;
+  --text-muted: #475569;
+  --text-sub: #334155;
+  --blue-primary: #2563eb;
+  --blue-light: #38bdf8;
+  --blue-dark: #0f2468;
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+  --radius-full: 9999px;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+.site-wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+/* ==========================================================================
+   NAVIGATION BAR (SCREENSHOT 1)
+   ========================================================================== */
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-logo-badge {
+  width: 38px;
+  height: 38px;
+  background: var(--blue-primary);
+  color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 19px;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.28);
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-main);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btn-get-in-touch-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 9px 20px;
+  border-radius: var(--radius-full);
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s var(--ease-spring);
+}
+
+.btn-get-in-touch-nav:hover {
+  background: var(--blue-primary);
+  transform: translateY(-1px);
+}
+
+.hamburger-btn {
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-full);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s var(--ease-spring);
+}
+
+.hamburger-btn:hover {
+  background: #f8fafc;
+  transform: scale(1.04);
+}
+
+.hamburger-btn span {
+  width: 18px;
+  height: 2px;
+  background: var(--text-main);
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   HERO SECTION 1 — ARCH DOME & WATERMARK (SCREENSHOT 1)
+   ========================================================================== */
+.hero-arch-section {
+  position: relative;
+  padding: 10px 0 60px;
+  overflow: hidden;
+}
+
+/* Giant background watermark: DESIGNER */
+.watermark-text {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(80px, 16.5vw, 195px);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  text-shadow: 0 4px 24px rgba(15, 23, 42, 0.04);
+  text-transform: uppercase;
+  z-index: 1;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* Centered Portfon Arch Stage (Exact Reference Screenshot) */
+.hero-arch-wrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.hero-portfon-stage {
+  position: relative;
+  width: clamp(370px, 43vw, 500px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.hero-portfon-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 20px 45px rgba(37, 99, 235, 0.22));
+  transition: transform 0.4s var(--ease-spring);
+}
+
+.hero-portfon-stage:hover .hero-portfon-img {
+  transform: translateY(-4px) scale(1.015);
+}
+
+/* Floating Tags (Slanted Pills like Portfon Reference — Both Parallel -16deg) */
+.hero-floating-tag {
+  position: absolute;
+  z-index: 4;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: #1e293b;
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 10px 25px -4px rgba(15, 23, 42, 0.1), 0 2px 8px rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  pointer-events: auto;
+  cursor: default;
+  white-space: nowrap;
+  transition: box-shadow 0.3s ease;
+}
+
+.hero-floating-tag.tag-left {
+  top: 38%;
+  left: -52px;
+  transform: rotate(-16deg);
+  animation: floatPillLeft 5s ease-in-out infinite alternate;
+}
+
+.hero-floating-tag.tag-right {
+  top: 22%;
+  right: -42px;
+  transform: rotate(-16deg);
+  animation: floatPillRight 5.5s ease-in-out 0.6s infinite alternate;
+}
+
+.hero-floating-tag.tag-left:hover {
+  animation-play-state: paused;
+  transform: rotate(-16deg) translateY(-4px) scale(1.04);
+  box-shadow: 0 14px 30px -4px rgba(15, 23, 42, 0.16);
+}
+
+.hero-floating-tag.tag-right:hover {
+  animation-play-state: paused;
+  transform: rotate(-16deg) translateY(-4px) scale(1.04);
+  box-shadow: 0 14px 30px -4px rgba(15, 23, 42, 0.16);
+}
+
+@keyframes floatPillLeft {
+  0% { transform: rotate(-16deg) translateY(0px); }
+  100% { transform: rotate(-15deg) translateY(-8px); }
+}
+
+@keyframes floatPillRight {
+  0% { transform: rotate(-16deg) translateY(0px); }
+  100% { transform: rotate(-17deg) translateY(8px); }
+}
+
+/* Floating Stat Card Bottom Right (Exact Portfon Glass Card) */
+.hero-floating-stat-card {
+  position: absolute;
+  bottom: 11%;
+  right: -58px;
+  z-index: 4;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  padding: 15px 24px;
+  border-radius: 18px;
+  box-shadow: 0 14px 35px -5px rgba(15, 23, 42, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  pointer-events: auto;
+  cursor: default;
+  animation: floatStatCard 6s ease-in-out 1s infinite alternate;
+  transition: box-shadow 0.3s ease;
+}
+
+.hero-floating-stat-card:hover {
+  animation-play-state: paused;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 18px 40px -5px rgba(15, 23, 42, 0.16);
+}
+
+@keyframes floatStatCard {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-6px); }
+}
+
+.hero-floating-stat-card .stat-card-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.hero-floating-stat-card .stat-card-desc {
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+@media (max-width: 768px) {
+  .hero-floating-tag.tag-left {
+    left: -10px;
+  }
+  .hero-floating-tag.tag-right {
+    right: -10px;
+  }
+  .hero-floating-stat-card {
+    right: -10px;
+    bottom: 5%;
+  }
+}
+
+/* Hero Titles Overlay (Bottom Left — Tightly nested under arch like reference) */
+.hero-title-group {
+  position: relative;
+  z-index: 3;
+  margin-top: -105px;
+}
+
+.hero-intro-label {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+
+.hero-display-headline {
+  font-size: clamp(38px, 4.8vw, 60px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: var(--text-main);
+  max-width: 600px;
+}
+
+/* About Intro Row */
+.hero-about-strip {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  margin-top: 50px;
+  padding-top: 36px;
+  border-top: 1px solid rgba(203, 213, 225, 0.6);
+}
+
+.star-about-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--blue-primary);
+  background: rgba(37, 99, 235, 0.08);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+}
+
+.hero-about-lead {
+  font-size: clamp(17px, 2vw, 22px);
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.5;
+  max-width: 800px;
+}
+
+/* ==========================================================================
+   HERO SECTION 2 — CROSSED ARMS PORTRAIT & BENTO (SCREENSHOT 2)
+   ========================================================================== */
+.secondary-portrait-section {
+  padding: 20px 0 60px;
+}
+
+.top-pill-center-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.btn-get-in-touch-center {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 13px 28px;
+  border-radius: var(--radius-full);
+  font-size: 14.5px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s var(--ease-spring);
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.12);
+}
+
+.btn-get-in-touch-center:hover {
+  background: var(--blue-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.25);
+}
+
+.btn-arrow-circle {
+  width: 26px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  transition: transform 0.2s var(--ease-spring);
+}
+
+.btn-get-in-touch-center:hover .btn-arrow-circle {
+  transform: translateX(3px);
+  background: #ffffff;
+  color: var(--blue-primary);
+}
+
+/* Large Portrait Card */
+.large-portrait-card {
+  background: #f1f5f9;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 16px 40px -10px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  max-width: 1100px;
+  margin: 0 auto 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.large-portrait-card img {
+  width: 100%;
+  max-height: 580px;
+  object-fit: cover;
+  object-position: center 25%;
+  display: block;
+}
+
+/* Two Bento Cards below */
+.bento-two-col {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.bento-card-white {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 38px 36px;
+  border: 1px solid var(--border-card);
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.metric-big-num {
+  font-size: clamp(48px, 5.5vw, 64px);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--text-main);
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+
+.metric-sub-label {
+  font-size: 14px;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.avatar-stack-row {
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+}
+
+.avatar-stack-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2.5px solid #ffffff;
+  margin-left: -8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bento-strategic-card {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 38px 36px;
+  border: 1px solid var(--border-card);
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.strategic-title {
+  font-size: clamp(26px, 3.2vw, 36px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  color: var(--text-main);
+  margin-bottom: 30px;
+}
+
+.pill-tags-cluster {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.pill-tag-flat {
+  background: #f1f5f9;
+  color: var(--text-main);
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+}
+
+.pill-tag-slanted {
+  background: #ffffff;
+  color: var(--text-main);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 9px 22px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(203, 213, 225, 0.8);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transform: rotate(-18deg);
+  margin-left: 10px;
+}
+
+/* ==========================================================================
+   FEATURED WORKS (PROJECTS 01 TO 04 — SCREENSHOTS 3 & 4)
+   ========================================================================== */
+.projects-showcase-section {
+  padding: 60px 0 80px;
+}
+
+.section-label-center {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-eyebrow {
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue-primary);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.section-head-title {
+  font-size: clamp(32px, 3.8vw, 46px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+}
+
+.projects-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-framer-card {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-card);
+  padding: 44px 40px;
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.04);
+  transition: all 0.3s var(--ease-spring);
+}
+
+.project-framer-card:hover {
+  box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.08);
+  transform: translateY(-2px);
+}
+
+.project-card-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.project-title-text {
+  font-size: clamp(24px, 2.8vw, 34px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--text-main);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-title-text:hover {
+  color: var(--blue-primary);
+}
+
+.project-index-num {
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 800;
+  color: #cbd5e1;
+  letter-spacing: -0.02em;
+}
+
+.project-card-body-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.project-left-details {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.project-desc-paragraph {
+  font-size: 15.5px;
+  color: var(--text-sub);
+  line-height: 1.7;
+}
+
+.btn-explore-project {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: #0f172a;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  width: fit-content;
+  transition: all 0.25s var(--ease-spring);
+}
+
+.btn-explore-project:hover {
+  background: var(--blue-primary);
+  transform: translateY(-2px);
+}
+
+.btn-explore-project .arrow-circle {
+  width: 24px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: transform 0.2s var(--ease-spring);
+}
+
+.btn-explore-project:hover .arrow-circle {
+  transform: translateX(3px);
+  background: #ffffff;
+  color: var(--blue-primary);
+}
+
+.project-preview-box {
+  background: #f8fafc;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border-card);
+  aspect-ratio: 16 / 10;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+}
+
+.project-preview-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s var(--ease-spring);
+}
+
+.project-preview-box:hover img {
+  transform: scale(1.03);
+}
+
+/* ==========================================================================
+   DARK BLUE SECTION — DESIGN SOLUTIONS BUILT FOR GROWTH (SCREENSHOT 5)
+   ========================================================================== */
+.growth-solutions-section {
+  background: var(--blue-dark);
+  border-radius: var(--radius-xl);
+  padding: 68px 54px;
+  color: #ffffff;
+  max-width: 1100px;
+  margin: 0 auto 70px;
+}
+
+.growth-section-heading {
+  text-align: center;
+  font-size: clamp(28px, 3.6vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-bottom: 48px;
+}
+
+.growth-bento-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.growth-card {
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Card 1 & 3: Soft Blue/Lavender Gradient Cards */
+.growth-card.gradient-card {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.35) 0%, rgba(99, 102, 241, 0.45) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  min-height: 290px;
+}
+
+/* Card 2 & 4: Clean Dark/Translucent Cards */
+.growth-card.dark-clean-card {
+  background: #ffffff;
+  color: var(--text-main);
+  min-height: 290px;
+}
+
+.growth-card-title {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.growth-card-desc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+.dark-clean-card .growth-card-desc {
+  color: var(--text-muted);
+}
+
+/* Floating Tag Bubbles in Card 1 */
+.floating-bubbles-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 36px;
+}
+
+.bubble-tag {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text-main);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.bubble-tag.slanted-1 {
+  transform: rotate(-12deg);
+}
+
+.bubble-tag.slanted-2 {
+  transform: rotate(8deg);
+}
+
+/* UI/UX Phone Mockup Visual in Card 2 */
+.uiux-mockup-frame {
+  margin-top: 20px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-card);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.uiux-mockup-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================================
+   CONTACT SECTION & FOOTER
+   ========================================================================== */
+.contact-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 48px 44px;
+  border: 1px solid var(--border-card);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 36px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.contact-headline {
+  font-size: clamp(28px, 3.4vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-bottom: 12px;
+}
+
+.contact-sub {
+  font-size: 15px;
+  color: var(--text-sub);
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+
+.contact-meta-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.contact-meta-item a {
+  color: var(--blue-primary);
+  text-decoration: none;
+}
+
+.contact-buttons-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn-contact-main {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--blue-primary);
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: var(--radius-full);
+  font-size: 14.5px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s var(--ease-spring);
+}
+
+.btn-contact-main:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.btn-contact-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #f1f5f9;
+  color: var(--text-main);
+  padding: 13px 26px;
+  border-radius: var(--radius-full);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--border-card);
+  transition: all 0.2s var(--ease-spring);
+  cursor: pointer;
+}
+
+.btn-contact-ghost:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+}
+
+.site-footer {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 20px 0;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (TABLET & MOBILE)
+   ========================================================================== */
+@media (max-width: 960px) {
+  .hero-about-strip {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .bento-two-col {
+    grid-template-columns: 1fr;
+  }
+  .project-card-body-grid {
+    grid-template-columns: 1fr;
+  }
+  .growth-bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-wrapper {
+    padding: 0 16px 60px;
+  }
+  .watermark-text {
+    font-size: 64px;
+    top: 5px;
+  }
+  .hero-glass-lens {
+    width: 280px;
+  }
+  .hero-display-headline {
+    font-size: 32px;
+  }
+  .project-framer-card {
+    padding: 24px 20px;
+  }
+  .growth-solutions-section {
+    padding: 40px 20px;
+  }
+  .contact-section {
+    padding: 28px 20px;
+  }
+  .btn-get-in-touch-nav {
+    display: none;
+  }
+}
+
+/* Toast Notification */
+.toast-notice {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #0f172a;
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: var(--radius-full);
+  font-size: 13.5px;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 999;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 0.3s var(--ease-spring), opacity 0.3s ease;
+}
+
+.toast-notice.show {
+  transform: translateY(0);
+  opacity: 1;
+}
